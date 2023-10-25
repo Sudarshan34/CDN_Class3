@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+
+        *{
+            box-sizing: border-box;
+           
+        }
+
+        body{
+            background-color: black;
+        }
+
+        #div1,#div2,#div3{
+            font-size: 28px;
+            color:  black;
+        }
+
+        #h1{
+            color: darkblue;
+            border-bottom:2px solid white;
+            padding: 10px;
+
+        }
+        
+        #a{
+            color: darkblue;
+        }
+
+        #root{
+            background-color: yellowgreen;
+            padding: 27px;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 20px;
+            border: 4px solid white;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+
+    </div>
+
+    <script type="text/babel">
+        const rootele = document.querySelector("#root");
+        const root = ReactDOM.createRoot(rootele)
+        const h1 = React.createElement("h1", {id:"h1"}, "Learn Web Development")
+        const div1 = React.createElement("div", { id: "div1" }, React.createElement("p", {}, "Welcome to our front-end web developer learning pathway.Here we provide you with a structured course that will teach you all you need to know to become a front - end web developer.Work through each section, learning new skills(or improving existing ones) as you go along.Each section includes exercises and assessments to test your understanding before you move forward."),
+        )
+        const div2 = React.createElement("div", {id:"div2"}, React.createElement("p",{},"You don't need any previous knowledge to start this course. All you need is a computer that can run modern web browsers, an internet connection, and a willingness to learn.If you are not sure if front-end web development is for you, and/or you want a gentle introduction before starting a longer and more complete course, work through our ", React.createElement("a", { href: 'https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web', target: '_blank' ,id:"a"}, "Getting started with the web module first.")))
+        const div3 = React.createElement("div", {id:"div2"}, React.createElement("p", {}, "We have tried to make learning front-end web development as comfortable as possible, but you will probably still get stuck because you don't understand something, or some code is just not working.Don't panic. We all get stuck, whether we are beginner or professional web developers. The Learning and getting help article provides you with a series of tips for looking up information and helping yourself. If you are still stuck, feel free to post a question on our Discourse forums."))
+
+
+
+        // root.render(div3)
+
+        function Comp() {
+            return (
+                <div>
+                    {h1}
+                    {div1}
+                    {div2}
+                    {div3}
+
+                </div>
+            )
+        }
+        root.render(<Comp/>)
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>
